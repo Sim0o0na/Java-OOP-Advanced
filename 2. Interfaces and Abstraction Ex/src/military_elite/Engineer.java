@@ -1,18 +1,19 @@
 package military_elite;
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  * Created by Sim0o on 3/15/2017.
  */
 public class Engineer extends SpecialisedSoldier{
-    private HashMap<String, Integer> repairs;
+    private TreeMap<String, Integer> repairs;
     public Engineer(String id, String firstName, String lastName, double salary, String corps) {
         super(id, firstName, lastName, salary, corps);
-        this.repairs = new HashMap<>();
+        this.repairs = new TreeMap<>();
     }
 
-    public HashMap<String, Integer> getRepairs(){
+    public TreeMap<String, Integer> getRepairs(){
         return this.repairs;
     }
 

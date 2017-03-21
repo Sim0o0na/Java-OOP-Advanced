@@ -1,7 +1,4 @@
 package military_elite;
-
-import telephony.Software;
-
 /**
  * Created by Sim0ona on 3/15/2017.
  */

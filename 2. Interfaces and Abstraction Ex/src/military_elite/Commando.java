@@ -22,6 +22,9 @@ public class Commando extends SpecialisedSoldier {
             this.getMissions().put(missionCodeName, missionState);
         }
     }
+    private void completeMission(){
+
+    }
 
     @Override
     public String toString(){
