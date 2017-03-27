@@ -8,28 +8,38 @@ import java.util.Iterator;
 public class Library<Book> implements Iterable<Book> {
     private Book[] books;
 
-    public Library(Book... books){
+    public Library(Book... books) {
         this.books = books;
     }
 
     @Override
     public Iterator<Book> iterator() {
-        return new LibIterator();
+        return new Iterator<Book>() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public Book next() {
+                return null;
+            }
+        };
     }
+
     private final class LibIterator implements Iterator<Book> {
         private int counter = 0;
 
-        public boolean hasNext(){
-            if(this.counter<books.length){
+        public boolean hasNext() {
+            if (this.counter < books.length) {
                 return true;
             }
             return false;
         }
 
-        public Book next(){
+        public Book next() {
             counter++;
-            return books[counter-1];
+            return books[counter - 1];
         }
     }
-
 }
